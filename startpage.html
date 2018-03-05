@@ -123,10 +123,11 @@
 </div>
 </div>
 </div>
+</div>
 
-
-<!-- COLUMN 5 -->
-<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+<!-- ROW 2 -->
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 <div class="card">
 <div class="card-body">
 <div class="card-text">
@@ -137,21 +138,22 @@
 </div>
 </div>
 </div>
+</div>
 
 </div>
-</div>
+
 
 <script src="aux/moment.js"></script>
 <script src="aux/moment-timezone-with-data.js"></script>
 <script>
 function startTime() {
     var today = new Date();
-    var h = today.getHours();
-    var m = today.getMinutes();
-    var s = today.getSeconds();
-    h = prependZero(h);
-    m = prependZero(m);
-    s = prependZero(s);
+<!--    var h = today.getHours(); -->
+<!--    var m = today.getMinutes(); -->
+<!--    var s = today.getSeconds(); -->
+<!--    h = prependZero(h); -->
+<!--    m = prependZero(m); -->
+<!--    s = prependZero(s); -->
     var timeKamloops  = moment.tz(today, "America/Vancouver").format('YYYY-MM-DD HH:mm:ss');
     var timeBudapest  = moment.tz(today, "Europe/Budapest").format('YYYY-MM-DD HH:mm:ss');
     var timeMelbourne = moment.tz(today, "Australia/Melbourne").format('YYYY-MM-DD HH:mm:ss');
@@ -160,9 +162,9 @@ function startTime() {
     document.getElementById('time.melbourne').innerHTML = 'Melbourne: ' + timeMelbourne;
 }
 
-function prependZero(i) {
-    return i < 10 ? "0" + i : i;
-}
+<!--function prependZero(i) { -->
+<!--    return i < 10 ? "0" + i : i; -->
+<!--} -->
 function startProcess() {
     startTime();
     setInterval(startTime, 2000);
